@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!--app:navigationIcon="?attr/homeAsUpIndicator" />-->
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Height"
+            android:textAllCaps="true"
+            android:textColor="#FF9800"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/heightinput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/height"
+            android:layout_centerHorizontal="true"
+            android:hint="Enter your height (cm) "
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heightinput"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Weight"
+            android:textAllCaps="true"
+            android:textColor="#FF9800"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/weightinput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weight"
+            android:layout_centerHorizontal="true"
+            android:hint="Enter your weight (kg) "
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/calcbutton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weightinput"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="#FF9800"
+            android:onClick="calcbmi"
+            android:text="Calculate"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calcbutton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_below="@id/output"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerInside"
+
+            />
+
+        <Button
+            android:id="@+id/share"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/pic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="10dp"
+            android:background="#FF9800"
+            android:onClick="share"
+            android:text="Share with your friends" />
+    </RelativeLayout>
+
+
+</ScrollView>
